@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  foo:
+    image: alpine:3.13.2
+    volumes: 
+      - ./shared_folder:/usr/shared_folder
+    working_dir: /usr/shared_folder
+    command: >
+      sed -i '$$ a Je suis la deuxième ligne, enchanté !' ./foo.txt
+
